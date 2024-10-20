@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart' hide EmailAuthProvider;
 import 'package:firebase_ui_auth/firebase_ui_auth.dart';
 import 'package:get/get.dart';
 
@@ -11,7 +12,9 @@ part 'app_routes.dart';
 class AppPages {
   AppPages._();
 
-  static const INITIAL = Routes.FIRE_LOGIN;
+  static var INITIAL = FirebaseAuth.instance.currentUser == null
+      ? Routes.FIRE_LOGIN
+      : Routes.BOOKINGS;
 
   static final routes = [
     GetPage(
