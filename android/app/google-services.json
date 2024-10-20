@@ -1,0 +1,91 @@
+{
+  "project_info": {
+    "project_number": "148473932951",
+    "firebase_url": "https://towhid-portfolio.firebaseio.com",
+    "project_id": "towhid-portfolio",
+    "storage_bucket": "towhid-portfolio.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:148473932951:android:21b195caaa7f19f41d4dd2",
+        "android_client_info": {
+          "package_name": "com.example.agro_shopping"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "148473932951-q2tulnfm0ftifidj7tdl0ga8ghp3bis8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.agro_shopping",
+            "certificate_hash": "09ab41a03921130995b4aec50a530aa19755eaf7"
+          }
+        },
+        {
+          "client_id": "148473932951-ai3251ei14568pleu69mcs5cj32h3vuf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCHkMfwLvAZag8OkVGvQm23Aic0JSD_Og8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "148473932951-ai3251ei14568pleu69mcs5cj32h3vuf.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "148473932951-hklktvljbv6d0hjbjkk0ar1v149feulp.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.virtualmaskfit.virtual-mask-fit-mobile"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:148473932951:android:7322e6b04980d5751d4dd2",
+        "android_client_info": {
+          "package_name": "itstowhid.com.car_workshop"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "148473932951-ai3251ei14568pleu69mcs5cj32h3vuf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCHkMfwLvAZag8OkVGvQm23Aic0JSD_Og8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "148473932951-ai3251ei14568pleu69mcs5cj32h3vuf.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "148473932951-hklktvljbv6d0hjbjkk0ar1v149feulp.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.virtualmaskfit.virtual-mask-fit-mobile"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

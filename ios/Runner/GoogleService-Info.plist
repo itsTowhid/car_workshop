@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>148473932951-pgofl3dkmfqmv3mrmmgqq48d1um1391f.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.148473932951-pgofl3dkmfqmv3mrmmgqq48d1um1391f</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>148473932951-6f96i10e1if2huq6b8ofgcak4eknik4p.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyAyEnTMP1Ori8IDC7bfgqYxhQCHXzWdP4A</string>
+	<key>GCM_SENDER_ID</key>
+	<string>148473932951</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>itstowhid.com.carWorkshop</string>
+	<key>PROJECT_ID</key>
+	<string>towhid-portfolio</string>
+	<key>STORAGE_BUCKET</key>
+	<string>towhid-portfolio.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:148473932951:ios:c893f98a39578fae1d4dd2</string>
+	<key>DATABASE_URL</key>
+	<string>https://towhid-portfolio.firebaseio.com</string>
+</dict>
+</plist>
