@@ -1,6 +1,8 @@
 import 'package:firebase_ui_auth/firebase_ui_auth.dart';
 import 'package:get/get.dart';
 
+import '../modules/bookings/bindings/bookings_binding.dart';
+import '../modules/bookings/views/bookings_view.dart';
 import '../modules/home/bindings/home_binding.dart';
 import '../modules/home/views/home_view.dart';
 
@@ -18,7 +20,7 @@ class AppPages {
         providers: [EmailAuthProvider()],
         actions: [
           AuthStateChangeAction<SignedIn>(
-              (ctx, state) => Get.offAndToNamed(Routes.HOME)),
+              (ctx, state) => Get.offAndToNamed(Routes.BOOKINGS)),
         ],
       ),
     ),
@@ -26,6 +28,11 @@ class AppPages {
       name: _Paths.HOME,
       page: () => const HomeView(),
       binding: HomeBinding(),
+    ),
+    GetPage(
+      name: _Paths.BOOKINGS,
+      page: () => const BookingsView(),
+      binding: BookingsBinding(),
     ),
   ];
 }
