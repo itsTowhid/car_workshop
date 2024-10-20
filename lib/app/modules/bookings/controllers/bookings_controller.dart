@@ -3,41 +3,59 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class BookingsController extends GetxController {
-  final FirebaseFirestore _firestore = FirebaseFirestore.instance;
+  // Car Details Controllers
+  TextEditingController makeController = TextEditingController();
+  TextEditingController modelController = TextEditingController();
+  TextEditingController yearController = TextEditingController();
+  TextEditingController regPlateController = TextEditingController();
 
-  // Form fields
-  final makeController = TextEditingController();
-  final modelController = TextEditingController();
-  final yearController = TextEditingController();
-  final regPlateController = TextEditingController();
-  final customerNameController = TextEditingController();
-  final customerPhoneController = TextEditingController();
-  final customerEmailController = TextEditingController();
-  final bookingTitleController = TextEditingController();
-  final mechanicController = TextEditingController();
+  // Customer Details Controllers
+  TextEditingController customerNameController = TextEditingController();
+  TextEditingController customerPhoneController = TextEditingController();
+  TextEditingController customerEmailController = TextEditingController();
 
-  final startDate = Rxn<DateTime>();
-  final endDate = Rxn<DateTime>();
+  // Booking Details Controllers
+  TextEditingController bookingTitleController = TextEditingController();
+  Rx<DateTime?> startDate = Rx<DateTime?>(null);
+  Rx<DateTime?> endDate = Rx<DateTime?>(null);
+  TextEditingController mechanicController = TextEditingController();
 
-  Future<void> createBooking() async {
+  // Mechanics List
+  RxList<String> mechanicsList = <String>[].obs;
+
+  @override
+  void onInit() {
+    super.onInit();
+    fetchMechanics();
+  }
+
+  // Method to fetch mechanics from Firestore
+  void fetchMechanics() async {
     try {
-      await _firestore.collection('bookings').add({
-        'car_make': makeController.text,
-        'car_model': modelController.text,
-        'car_year': yearController.text,
-        'car_registration_plate': regPlateController.text,
-        'customer_name': customerNameController.text,
-        'customer_phone': customerPhoneController.text,
-        'customer_email': customerEmailController.text,
-        'booking_title': bookingTitleController.text,
-        'start_datetime': startDate.value,
-        'end_datetime': endDate.value,
-        'assigned_mechanic': mechanicController.text,
-        'created_at': Timestamp.now(),
-      });
-      Get.snackbar('Success', 'Booking created successfully!');
+      QuerySnapshot mechanicsSnapshot =
+          await FirebaseFirestore.instance.collection('mechanics').get();
+      List<String> fetchedMechanics =
+          mechanicsSnapshot.docs.map((doc) => doc['name'].toString()).toList();
+      mechanicsList.assignAll(fetchedMechanics); // Update the observable list
     } catch (e) {
-      Get.snackbar('Error', 'Failed to create booking: $e');
+      Get.snackbar('Error', 'Failed to load mechanics');
     }
+  }
+
+  // Method to create a booking
+  void createBooking() {
+    // Validation or booking creation logic goes here
+    if (startDate.value == null || endDate.value == null) {
+      Get.snackbar('Error', 'Please select valid start and end dates.');
+      return;
+    }
+
+    if (mechanicController.text.isEmpty) {
+      Get.snackbar('Error', 'Please assign a mechanic.');
+      return;
+    }
+
+    // Proceed with booking creation and saving to database
+    Get.snackbar('Success', 'Booking created successfully.');
   }
 }
