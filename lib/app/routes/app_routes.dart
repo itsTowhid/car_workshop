@@ -3,10 +3,12 @@ part of 'app_pages.dart';
 
 abstract class Routes {
   Routes._();
+  static const FIRE_LOGIN = _Paths.FIRE_LOGIN;
   static const HOME = _Paths.HOME;
 }
 
 abstract class _Paths {
   _Paths._();
+  static const FIRE_LOGIN = '/fire_login';
   static const HOME = '/home';
 }
