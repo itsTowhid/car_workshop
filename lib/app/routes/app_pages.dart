@@ -2,6 +2,8 @@ import 'package:firebase_auth/firebase_auth.dart' hide EmailAuthProvider;
 import 'package:firebase_ui_auth/firebase_ui_auth.dart';
 import 'package:get/get.dart';
 
+import '../modules/booking_calender/bindings/booking_calender_binding.dart';
+import '../modules/booking_calender/views/booking_calender_view.dart';
 import '../modules/bookings/bindings/bookings_binding.dart';
 import '../modules/bookings/views/bookings_view.dart';
 import '../modules/home/bindings/home_binding.dart';
@@ -14,7 +16,7 @@ class AppPages {
 
   static var INITIAL = FirebaseAuth.instance.currentUser == null
       ? Routes.FIRE_LOGIN
-      : Routes.BOOKINGS;
+      : Routes.HOME;
 
   static final routes = [
     GetPage(
@@ -23,7 +25,7 @@ class AppPages {
         providers: [EmailAuthProvider()],
         actions: [
           AuthStateChangeAction<SignedIn>(
-              (ctx, state) => Get.offAndToNamed(Routes.BOOKINGS)),
+              (ctx, state) => Get.offAndToNamed(Routes.HOME)),
         ],
       ),
     ),
@@ -36,6 +38,11 @@ class AppPages {
       name: _Paths.BOOKINGS,
       page: () => const BookingsView(),
       binding: BookingsBinding(),
+    ),
+    GetPage(
+      name: _Paths.BOOKING_CALENDER,
+      page: () => const BookingCalenderView(),
+      binding: BookingCalenderBinding(),
     ),
   ];
 }

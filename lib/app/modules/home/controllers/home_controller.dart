@@ -1,23 +1,16 @@
 import 'package:get/get.dart';
 
 class HomeController extends GetxController {
-  //TODO: Implement HomeController
+  final selectedIndex = 0.obs;
 
-  final count = 0.obs;
-  @override
-  void onInit() {
-    super.onInit();
+  String getAppBarTitle() {
+    switch (selectedIndex.value) {
+      case 0:
+        return 'Home';
+      case 1:
+        return 'Bookings';
+      default:
+        return '';
+    }
   }
-
-  @override
-  void onReady() {
-    super.onReady();
-  }
-
-  @override
-  void onClose() {
-    super.onClose();
-  }
-
-  void increment() => count.value++;
 }

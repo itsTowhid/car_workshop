@@ -6,6 +6,7 @@ abstract class Routes {
   static const FIRE_LOGIN = _Paths.FIRE_LOGIN;
   static const HOME = _Paths.HOME;
   static const BOOKINGS = _Paths.BOOKINGS;
+  static const BOOKING_CALENDER = _Paths.BOOKING_CALENDER;
 }
 
 abstract class _Paths {
@@ -13,4 +14,5 @@ abstract class _Paths {
   static const FIRE_LOGIN = '/fire_login';
   static const HOME = '/home';
   static const BOOKINGS = '/bookings';
+  static const BOOKING_CALENDER = '/booking-calender';
 }
